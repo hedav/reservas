@@ -15,6 +15,7 @@ function cancelarBtn(){
   activarModal();
 }
 
+document.getElementById("backdrop");
 
 function agregarEstudiante(){
 
@@ -31,7 +32,9 @@ function agregarEstudiante(){
 
   activarModal();
   renderNuevoEstudiante(estudianate,exame,calificacion);
+  // pintarEstudiante(exame,estudianate,calificacion)
 }
+
 
 const renderNuevoEstudiante = (title, imageUrl, rating) => {
   const idElement = '' + Math.random();
@@ -47,9 +50,9 @@ const renderNuevoEstudiante = (title, imageUrl, rating) => {
       <p>Calificación ${rating}/5</p>
     </div>
   `;
-  nuevoEstudiante.addEventListener('click', function(){
-    eliminarEstudiante(idElement);
-  })
+   nuevoEstudiante.addEventListener('click', function(){
+     eliminarEstudiante(idElement);
+   });
   const listRoot = document.getElementById('student-list');
   listRoot.append(nuevoEstudiante);
 };
@@ -73,3 +76,4 @@ transparencia.addEventListener('click', activarModal);
 button.addEventListener('click', activarModal);
 cancelAgregar.addEventListener('click',cancelarBtn);
 confirmarAgregar.addEventListener('click',agregarEstudiante);
+
