@@ -15,7 +15,6 @@ function cancelarBtn(){
   activarModal();
 }
 
-document.getElementById("backdrop");
 
 function agregarEstudiante(){
 
